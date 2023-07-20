@@ -61,7 +61,6 @@ jobs:
           to: ${{secrets.MAIL_RECIPIENT}}
           # Required sender full name (address can be skipped):
           from: Mastodon Mail Digest
-          body: This is a test
           # Optional HTML body read from file:
-          #html_body: file://README.html
+          html_body: file://render/index.html
 
