@@ -60,7 +60,7 @@ jobs:
           # Required recipients' addresses:
           to: ${{secrets.MAIL_RECIPIENT}}
           # Required sender full name (address can be skipped):
-          from: Mastodon Mail Digest
+          from: Mastodon Mail Digest <petersonjm1+mastodon_digest@gmail.com>
           # Optional HTML body read from file:
           html_body: file://render/index.html
 
