@@ -27,13 +27,6 @@ jobs:
           MASTODON_USERNAME: ${{ secrets.MASTODON_USERNAME }}
         run: |
           python run.py -n 24 -s SimpleWeighted -t lax
-      - name: publish
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: gh-pages
-          build_dir: render
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Send email
         uses: dawidd6/action-send-mail@v3.7.2
         with:
