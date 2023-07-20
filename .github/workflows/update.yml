@@ -63,4 +63,6 @@ jobs:
           from: Mastodon Mail Digest <petersonjm1+mastodon_digest@gmail.com>
           # Optional HTML body read from file:
           html_body: file://render/index.html
+          # Optional recipient of the email response:
+          reply_to: petersonjm1+mastodon_digest@gmail.com
 
