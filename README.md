@@ -1,3 +1,17 @@
+This is a fork of [mauforonda/mastodon_digest](https://github.com/mauforonda/mastodon_digest) that sends a daily digest email.
+
+- This fork copies the CSS and JS into the HTML template, so it can send a single HTML email.
+- It uses a [Github Action to send the email](https://github.com/dawidd6/action-send-mail), from a personal GMail account (using an app specific password).
+
+Email specific secrets:
+
+- `SMTP_SERVER`: `smtp://user:password@smtp.gmail.com:587`
+- `MAIL_USERNAME`: Full email address for the sending account
+- `MAIL_PASSWORD`: App specific password for the sending account
+- `MAIL_RECIPIENT`: Email address to send the digest to
+
+## Original README
+
 A fork of [hodgesmr/mastodon_digest](https://github.com/hodgesmr/mastodon_digest) that
 
 - runs on github actions
