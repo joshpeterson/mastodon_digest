@@ -27,10 +27,6 @@ jobs:
           MASTODON_USERNAME: ${{ secrets.MASTODON_USERNAME }}
         run: |
           python run.py -n 24 -s SimpleWeighted -t lax
-      - name: Get current date
-        id: date
-        run: |
-          echo "CURRENT_DATE=$(date +'%A %B %d, %Y')" >> $GITHUB_STATE
       - name: Send email
         uses: dawidd6/action-send-mail@v3.7.2
         with:
@@ -53,7 +49,7 @@ jobs:
           # Optional (recommended) mail server password:
           password: ${{secrets.MAIL_PASSWORD}}
           # Required mail subject:
-          subject: Mastodon Digest for ${{ env.CURRENT_DATE }}
+          subject: Mastodon Digest
           # Required recipients' addresses:
           to: ${{secrets.MAIL_RECIPIENT}}
           # Required sender full name (address can be skipped):
