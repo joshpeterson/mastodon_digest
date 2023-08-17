@@ -50,7 +50,7 @@ def run(
 
     # 2. Score them, and return those that meet our threshold
     threshold_posts = format_posts(
-        posts,
+        posts.reverse(),
         mastodon_base_url)
     threshold_boosts = format_posts(
         threshold.posts_meeting_criteria(boosts, scorer),
