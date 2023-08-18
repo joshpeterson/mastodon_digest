@@ -49,8 +49,9 @@ def run(
     posts, boosts = fetch_posts_and_boosts(hours, mst, mastodon_username)
 
     # 2. Score them, and return those that meet our threshold
+    posts.reverse()
     threshold_posts = format_posts(
-        posts.reverse(),
+        posts,
         mastodon_base_url)
     threshold_boosts = format_posts(
         threshold.posts_meeting_criteria(boosts, scorer),
