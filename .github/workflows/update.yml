@@ -56,4 +56,6 @@ jobs:
           from: Mastodon Mail Digest
           # Optional HTML body read from file:
           html_body: file://render/index.html
+      - name: commit to keep repo alive
+        uses: gautamkrishnar/keepalive-workflow@v1
 
